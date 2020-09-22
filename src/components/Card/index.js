@@ -1,11 +1,24 @@
 import React from 'react';
-import {View, Image, Text, ImageBackground} from 'react-native';
+import {
+  View,
+  Image,
+  Text,
+  ImageBackground,
+  TouchableOpacity,
+} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
 import style from './style';
 
 function Card(props) {
+  const navigation = useNavigation();
+
+  function goToDetails() {
+    navigation.navigate('Details', {data: props.data});
+  }
+
   return (
-    <ImageBackground style={style.container} source={props.data.background}>
+    <TouchableOpacity activeOpacity={0.9} onPress={goToDetails}>
       <View style={style.cardContainer}>
         <View style={style.headerContainer}>
           <Image style={style.profile} source={props.data.profile} />
@@ -28,7 +41,7 @@ function Card(props) {
           </View>
         </View>
       </View>
-    </ImageBackground>
+    </TouchableOpacity>
   );
 }
 

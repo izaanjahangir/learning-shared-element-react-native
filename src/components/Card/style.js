@@ -4,17 +4,12 @@ import constants from '../../config/constants';
 import colors from '../../config/colors';
 
 export default StyleSheet.create({
-  container: {
-    width: constants.WINDOW_WIDTH,
-    height: '100%',
-    paddingHorizontal: constants.SPACING_MEDIUM,
-    justifyContent: 'flex-end',
-  },
   cardContainer: {
-    minHeight: constants.WINDOW_HEIGHT * 0.3,
+    height: constants.WINDOW_HEIGHT * 0.3,
     backgroundColor: colors.WHITE,
     marginBottom: constants.SPACING_MEDIUM * 2,
     paddingHorizontal: constants.SPACING_MEDIUM,
+    marginHorizontal: constants.SPACING_MEDIUM,
     paddingVertical: constants.SPACING_MEDIUM * 0.5,
     shadowColor: '#000',
     shadowOffset: {
