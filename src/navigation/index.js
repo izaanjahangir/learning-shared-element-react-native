@@ -15,6 +15,12 @@ function navigation() {
       <Stack.Screen
         name="Details"
         component={Details}
+        sharedElementsConfig={(route) => {
+          const {params} = route;
+          const {data = {}} = params;
+
+          return [`item.background.${data._id}`, `item.card.${data._id}`];
+        }}
         options={() => ({
           gestureEnabled: false,
           cardStyleInterpolator: ({current: {progress}}) => {

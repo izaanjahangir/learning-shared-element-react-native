@@ -16,10 +16,21 @@ export default StyleSheet.create({
   itemContainer: {
     width: '100%',
   },
-  backgroundImage: {
+  cardContainer: {
     width: constants.WINDOW_WIDTH,
     height: '100%',
-    paddingHorizontal: constants.SPACING_MEDIUM,
     justifyContent: 'flex-end',
+  },
+  innerCardContainer: {
+    paddingHorizontal: constants.SPACING_MEDIUM,
+  },
+  imageContainer: {
+    position: 'absolute',
+    height: '100%',
+    width: '100%',
+  },
+  backgroundImage: {
+    height: '100%',
+    width: '100%',
   },
 });

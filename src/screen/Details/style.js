@@ -16,5 +16,6 @@ export default StyleSheet.create({
   },
   cardContainer: {
     marginTop: (-constants.WINDOW_HEIGHT * 0.3) / 2,
+    paddingHorizontal: constants.SPACING_MEDIUM,
   },
 });

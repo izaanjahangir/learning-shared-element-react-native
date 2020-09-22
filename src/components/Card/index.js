@@ -14,7 +14,7 @@ function Card(props) {
   const navigation = useNavigation();
 
   function goToDetails() {
-    navigation.navigate('Details', {data: props.data});
+    navigation.push('Details', {data: props.data});
   }
 
   return (

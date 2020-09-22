@@ -1,5 +1,6 @@
 import React from 'react';
-import {View, Text, Image} from 'react-native';
+import {View, Image} from 'react-native';
+import {SharedElement} from 'react-navigation-shared-element';
 
 import Card from '../../components/Card';
 import Header from '../../components/Header';
@@ -14,17 +15,17 @@ function Details(props) {
     <>
       <Header />
       <View style={style.container}>
-        <Image style={style.backgroundImage} source={data.background} />
+        <SharedElement id={`item.background.${data._id}`}>
+          <Image style={style.backgroundImage} source={data.background} />
+        </SharedElement>
         <View style={style.cardContainer}>
-          <Card data={data} />
+          <SharedElement id={`item.card.${data._id}`}>
+            <Card data={data} />
+          </SharedElement>
         </View>
       </View>
     </>
   );
 }
-
-Details.sharedElements = () => {
-  return ['izaan'];
-};
 
 export default Details;
